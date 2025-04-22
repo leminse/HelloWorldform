@@ -46,6 +46,7 @@ namespace HelloWorldform
                     break;          // 초록색 줄 쳐저 있는 이유 : 어처피 실행 안될거다. 알려주는 것.
 
                 case DialogResult.OK:
+                    lblFileName.Text = openFileDialog.FileName;
                     using (StreamReader sr = new StreamReader(openFileDialog.FileName))
                     {
                         textBox1.Text = sr.ReadToEnd();
